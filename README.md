@@ -93,3 +93,112 @@ deliveries
 | `image`     | Alternative image URL                              |
 | `verified`  | Verification information when available            |
 | `duplicate` | Duplicate information when available               |
+
+
+ 🔥 Firebase / Firestore
+
+Madadgar AI uses **Firebase Firestore** as its cloud database.
+
+The dashboard listens to the `deliveries` collection in real time using Firestore's `onSnapshot()` listener. When delivery records are added or updated, the dashboard can update without manually refreshing the page.
+
+### Firestore Collection
+
+The main collection used by the project is:
+
+```text
+deliveries
+| Field       | Purpose                                            |
+| ----------- | -------------------------------------------------- |
+| `area`      | Area associated with the delivery                  |
+| `cnic`      | CNIC information associated with a delivery record |
+| `lat`       | Latitude coordinate                                |
+| `lng`       | Longitude coordinate                               |
+| `latitude`  | Alternative latitude field                         |
+| `longitude` | Alternative longitude field                        |
+| `timestamp` | Delivery timestamp                                 |
+| `time`      | Alternative time field                             |
+| `photo`     | Delivery photo URL when available                  |
+| `image`     | Alternative image URL                              |
+| `verified`  | Verification information when available            |
+| `duplicate` | Duplicate information when available               |
+
+
+🗺️ Live Map
+
+The dashboard displays delivery locations on an interactive map.
+
+The map uses:
+
+MapLibre GL
+OpenFreeMap
+OpenStreetMap/OpenMapTiles data
+
+When valid latitude and longitude information is available in Firestore, delivery locations can be represented on the dashboard map.
+
+Google Maps navigation links may also be used when navigation to a location is required.
+
+🚀 Live Demo
+
+Live Website:
+
+https://mahjabeen903.github.io/madadgar-ai/
+
+GitHub Repository:
+https://github.com/Mahjabeen903/madadgar-ai.git
+
+💻 How to Run Locally
+Download or clone this repository.
+Open the project folder.
+Make sure index.html is present in the root folder.
+Open index.html in a browser.
+Allow the dashboard to connect to Firebase.
+The dashboard will load delivery information from the Firestore deliveries collection when records are available.
+
+For the best deployment experience, the project can be hosted using GitHub Pages.
+
+🌐 GitHub Pages Deployment
+
+This project can be deployed using GitHub Pages.
+
+Steps
+Create a GitHub repository.
+Upload index.html to the repository root.
+Upload this README.md.
+Open Settings → Pages.
+Select the main branch.
+Select the / (root) folder.
+Save the settings.
+Wait for GitHub Pages to finish building the website.
+Open the generated GitHub Pages URL.
+
+The final structure should look like:
+madadgar-ai/
+├── index.html
+└── README.md
+
+🔐 Security Considerations
+
+The Firebase configuration used by a web application is visible to the client and should not be treated as a private password or secret key.
+
+The security of the Firestore database must be enforced through Firebase Authentication and Firestore Security Rules where required.
+
+Sensitive credentials such as Firebase service-account private keys must never be committed to this repository.
+
+The project should also avoid exposing unnecessary personal information in the public dashboard.
+
+💡 Hackathon Value
+
+Madadgar AI demonstrates how a lightweight web dashboard can connect a disaster-relief workflow with a real-time cloud database.
+
+The project focuses on:
+
+Real-time disaster relief monitoring
+Delivery verification
+Duplicate detection information
+Geographic visualization
+Centralized delivery records
+Live dashboard updates
+Simple and accessible web deployment
+
+The goal is to provide relief teams with a clearer view of delivery activity and affected areas.
+
