@@ -1,7 +1,7 @@
  Madadgar AI — Live Disaster Relief Dashboard
 
 Madadgar AI is a real-time disaster relief and aid delivery monitoring dashboard designed to help relief teams visualize delivery activity, monitor affected/reached areas, and review verification and duplicate information from a centralized interface. The dashboard connects directly to Firebase Firestore and updates its statistics, delivery table, and interactive map as delivery records change 
-#🚨Problem
+  ##🚨Problem
 
 During disaster-relief operations, delivery information can become fragmented across different records and systems. This can make it difficult for relief teams to understand:
 
@@ -13,7 +13,7 @@ During disaster-relief operations, delivery information can become fragmented ac
 
 Manual monitoring can also make coordination more difficult when teams need a clear geographic and data-based overview.
 
- 💡 Solution
+   ##💡 Solution
 
 Madadgar AI provides a centralized dashboard for monitoring disaster-relief deliveries in real time.
 
@@ -29,7 +29,7 @@ The dashboard:
 
 The goal is to provide relief teams with a clearer, more current view of delivery activity without relying on manually refreshed data.
 
- ✨ Key Features
+   ##✨ Key Features
 
 - 🔄 **Real-time Firestore synchronization** using `onSnapshot()`
 - 📦 **Live delivery monitoring** from the `deliveries` collection
@@ -43,7 +43,7 @@ The goal is to provide relief teams with a clearer, more current view of deliver
 - 🧭 **Google Maps navigation links** where location information is available
 - 📱 **Responsive dashboard interface** for different screen sizes
 
-🗺️ How It Works
+  ##🗺️ How It Works
 
 The application follows a simple real-time data flow:
 
@@ -78,13 +78,13 @@ Relief Monitoring
 | **OpenFreeMap**     | Map style/data source                              |
 | **GitHub Pages**    | Static website hosting                             |
 
- 🔥 Firebase / Firestore
+   ##🔥 Firebase / Firestore
 
 Madadgar AI uses **Firebase Firestore** as its cloud database.
 
 The dashboard listens to the `deliveries` collection in real time using Firestore's `onSnapshot()` listener. When delivery records are added or updated, the dashboard can update without manually refreshing the page.
 
- Firestore Collection
+   ##Firestore Collection
 
 The main collection used by the project is:
 
@@ -106,7 +106,7 @@ deliveries
 | `duplicate` | Duplicate information when available               |
 
 
-🗺️ Live Map
+  ##🗺️ Live Map
 
 The dashboard displays delivery locations on an interactive map.
 
@@ -120,7 +120,7 @@ When valid latitude and longitude information is available in Firestore, deliver
 
 Google Maps navigation links may also be used when navigation to a location is required.
 
-🚀 Live Demo
+  ##🚀 Live Demo
 
 Live Website:
 
@@ -129,7 +129,7 @@ https://mahjabeen903.github.io/madadgar-ai/
 GitHub Repository:
 https://github.com/Mahjabeen903/madadgar-ai.git
 
-💻 How to Run Locally
+  ##💻 How to Run Locally
 Download or clone this repository.
 Open the project folder.
 Make sure index.html is present in the root folder.
@@ -138,7 +138,7 @@ Allow the dashboard to connect to Firebase.
 The dashboard will load delivery information from the Firestore deliveries collection when records are available.
 
 For the best deployment experience, the project can be hosted using GitHub Pages.
-🔐 Security Considerations
+    ##🔐 Security Considerations
 
 The Firebase configuration used by a web application is visible to the client and should not be treated as a private password or secret key.
 
@@ -148,10 +148,10 @@ Sensitive credentials such as Firebase service-account private keys must never b
 
 The project should also avoid exposing unnecessary personal information in the public dashboard.
 
-💡 Hackathon Value
+   ##💡 Hackathon Value
 Madadgar AI demonstrates how a lightweight web dashboard can connect a disaster-relief workflow with a real-time cloud database.
 
-The project focuses on:
+   ##The project focuses on:
 
 Real-time disaster relief monitoring
 Delivery verification
