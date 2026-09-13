@@ -1,7 +1,8 @@
  Madadgar AI — Live Disaster Relief Dashboard
 
 Madadgar AI is a real-time disaster relief and aid delivery monitoring dashboard designed to help relief teams visualize delivery activity, monitor affected/reached areas, and review verification and duplicate information from a centralized interface. The dashboard connects directly to Firebase Firestore and updates its statistics, delivery table, and interactive map as delivery records change 
-🚨 **Problem**
+#🚨Problem
+
 During disaster-relief operations, delivery information can become fragmented across different records and systems. This can make it difficult for relief teams to understand:
 
 - Where aid has already been delivered
