@@ -77,31 +77,13 @@ Relief Monitoring
 | **OpenFreeMap**     | Map style/data source                              |
 | **GitHub Pages**    | Static website hosting                             |
 
-deliveries
-
-| Field       | Purpose                                            |
-| ----------- | -------------------------------------------------- |
-| `area`      | Area associated with the delivery                  |
-| `cnic`      | CNIC information associated with a delivery record |
-| `lat`       | Latitude coordinate                                |
-| `lng`       | Longitude coordinate                               |
-| `latitude`  | Alternative latitude field                         |
-| `longitude` | Alternative longitude field                        |
-| `timestamp` | Delivery timestamp                                 |
-| `time`      | Alternative time field                             |
-| `photo`     | Delivery photo URL when available                  |
-| `image`     | Alternative image URL                              |
-| `verified`  | Verification information when available            |
-| `duplicate` | Duplicate information when available               |
-
-
  🔥 Firebase / Firestore
 
 Madadgar AI uses **Firebase Firestore** as its cloud database.
 
 The dashboard listens to the `deliveries` collection in real time using Firestore's `onSnapshot()` listener. When delivery records are added or updated, the dashboard can update without manually refreshing the page.
 
-### Firestore Collection
+ Firestore Collection
 
 The main collection used by the project is:
 
@@ -155,27 +137,6 @@ Allow the dashboard to connect to Firebase.
 The dashboard will load delivery information from the Firestore deliveries collection when records are available.
 
 For the best deployment experience, the project can be hosted using GitHub Pages.
-
-🌐 GitHub Pages Deployment
-
-This project can be deployed using GitHub Pages.
-
-Steps
-Create a GitHub repository.
-Upload index.html to the repository root.
-Upload this README.md.
-Open Settings → Pages.
-Select the main branch.
-Select the / (root) folder.
-Save the settings.
-Wait for GitHub Pages to finish building the website.
-Open the generated GitHub Pages URL.
-
-The final structure should look like:
-madadgar-ai/
-├── index.html
-└── README.md
-
 🔐 Security Considerations
 
 The Firebase configuration used by a web application is visible to the client and should not be treated as a private password or secret key.
@@ -187,7 +148,6 @@ Sensitive credentials such as Firebase service-account private keys must never b
 The project should also avoid exposing unnecessary personal information in the public dashboard.
 
 💡 Hackathon Value
-
 Madadgar AI demonstrates how a lightweight web dashboard can connect a disaster-relief workflow with a real-time cloud database.
 
 The project focuses on:
